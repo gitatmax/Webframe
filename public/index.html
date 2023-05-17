@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <title>Random Image</title>
+    <style>
+      html,
+      div {
+        margin: 0;
+        padding: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000000;
+      }
+
+      img {
+        background-color: #000000;
+        width: 95vh;
+        height: 95vh;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <script>
+      async function getRandomImage(path) {
+        path = path || "images/";
+        const response = await fetch("/images");
+        const images = await response.json();
+        const num = Math.floor(Math.random() * images.length);
+        const img = images[num];
+        const imgStr = '<img src="' + path + img + '" alt = "">';
+        document.write(imgStr);
+        document.close();
+      }
+    </script>
+  </head>
+  <body onload="getRandomImage()"></body>
+</html>

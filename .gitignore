@@ -1,0 +1,4 @@
+node_modules
+*._*
+public/images/
+legacy_version/images/

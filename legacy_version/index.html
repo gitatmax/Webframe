@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="10" http-equiv="refresh">
+    <meta charset="utf-8"/>
+    <title>Frame1</title>
+    <style>
+
+        html, div {
+            margin: 0;
+            padding: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #000000;
+        }
+
+        img {
+            background-color: #000000;
+            width: 95vh;
+            height: 95vh;
+            object-fit: cover;
+            /* top: 0; */
+            /* width: 100%; */
+            /* height: auto; */
+            /* bottom: 0; */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        var random_images_array = ['frame1.webp', 'frame2.webp', 'frame3.webp', 'frame4.webp', 'frame5.webp', 'frame6.webp', 'frame7.webp', 'frame8.webp', 'frame9.webp', 'frame10.webp', 'frame11.webp', 'frame12.webp', 'frame13.webp', 'frame.webp14', 'frame15.webp', 'frame16.webp', 'frame17.webp', 'frame18.webp', 'frame19.webp', 'frame20.webp', 'frame21.webp', 'frame22.webp', 'frame23.webp', 'frame24.webp', 'frame25.webp', 'frame26.webp', 'frame27.webp', 'frame28.webp', 'frame29.webp', 'frame30.webp', 'frame31.webp', 'frame32.webp', 'frame33.webp', 'frame34.webp', 'frame35.webp', 'frame36.webp', 'frame37.webp', 'frame38.webp', 'frame39.webp', 'frame40.webp'];
+
+        function getRandomImage(imgAr, path) {
+            path = path || 'images/'; // default path here
+            var num = Math.floor(Math.random() * imgAr.length);
+            var img = imgAr[num];
+            var imgStr = '<img src="' + path + img + '" alt = "">';
+            document.write(imgStr);
+            document.close();
+        }
+
+    </script>
+</head>
+<body>
+
+<div>
+    <script type="text/javascript">getRandomImage(random_images_array, 'images/')</script>
+</div>
+
+</body>
+</html>
